@@ -128,9 +128,9 @@ public struct RWMRecurrenceDayOfWeek: Equatable {
 /// The `RWMRecurrenceRule` class is used to describe the recurrence pattern for a recurring event.
 public struct RWMRecurrenceRule: Equatable {
     /// The frequency of the recurrence rule.
-    let frequency: RWMRecurrenceFrequency
+    public let frequency: RWMRecurrenceFrequency
     /// Specifies how often the recurrence rule repeats over the unit of time indicated by its frequency. For example, a recurrence rule with a frequency type of `.weekly` and an interval of `2` repeats every two weeks.
-    let interval: Int?
+    public let interval: Int?
     /// Indicates which day of the week the recurrence rule treats as the first day of the week. No value indicates that this property is not set for the recurrence rule.
     let firstDayOfTheWeek: RWMWeekday?
     /// The days of the week associated with the recurrence rule, as an array of `RWMRecurrenceDayOfWeek` objects.
