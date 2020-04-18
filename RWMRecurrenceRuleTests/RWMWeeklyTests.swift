@@ -145,4 +145,32 @@ class RWMWeeklyTests: RWMRecurrenceRuleBase {
              "2028-06-06T09:00:00", "2028-06-27T09:00:00", "2029-06-19T09:00:00", "2030-06-11T09:00:00"]
         )
     }
+
+    func testWeekly12() {
+        // recurrence each saturday
+        let start = calendar.date(from: DateComponents(year: 2020, month: 4, day: 18, hour: 6))!
+        run(rule: "RRULE:FREQ=WEEKLY;COUNT=3", start: start, results: [
+            "2020-04-18T06:00:00",
+            "2020-04-25T06:00:00",
+            "2020-05-02T06:00:00",
+        ])
+    }
+    func testWeekly13() {
+        // recurrence each friday
+        let start = calendar.date(from: DateComponents(year: 2020, month: 4, day: 17, hour: 6))!
+        run(rule: "RRULE:FREQ=WEEKLY;COUNT=3", start: start, results: [
+            "2020-04-17T06:00:00",
+            "2020-04-24T06:00:00",
+            "2020-05-01T06:00:00",
+        ])
+    }
+    func testWeekly14() {
+        // recurrence each sunday
+        let start = calendar.date(from: DateComponents(year: 2020, month: 4, day: 19, hour: 6))!
+        run(rule: "RRULE:FREQ=WEEKLY;COUNT=3", start: start, results: [
+            "2020-04-19T06:00:00",
+            "2020-04-26T06:00:00",
+            "2020-05-03T06:00:00",
+        ])
+    }
 }

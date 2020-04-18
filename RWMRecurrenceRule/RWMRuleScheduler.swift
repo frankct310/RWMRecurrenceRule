@@ -126,6 +126,7 @@ public class RWMRuleScheduler {
             // MARK: - WEEKLY
 
             var result = start // first result is the start date
+            /// 1...7
             let startWeekday = calendar.component(.weekday, from: start)
 
             var weekdays = [Int]() // 0-6 representing the required week days. 0 is WKST/Calendar.firstWeekday
@@ -133,7 +134,7 @@ public class RWMRuleScheduler {
             if let days = rule.daysOfTheWeek {
                 daysOfTheWeek = days.map { $0.dayOfTheWeek.rawValue }
             } else {
-                daysOfTheWeek = [ startWeekday ]
+                daysOfTheWeek = [ startWeekday % 7]
             }
 
             var sow: Date
