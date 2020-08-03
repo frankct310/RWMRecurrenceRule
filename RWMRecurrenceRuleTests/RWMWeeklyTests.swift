@@ -170,7 +170,7 @@ class RWMWeeklyTests: RWMRecurrenceRuleBase {
         run(rule: "RRULE:FREQ=WEEKLY;COUNT=3", start: start, results: [
             "2020-04-19T06:00:00",
             "2020-04-26T06:00:00",
-            "2020-05-01T06:00:00",
+            "2020-05-03T06:00:00",
         ])
     }
 }

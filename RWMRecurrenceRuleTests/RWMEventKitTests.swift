@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import RWMRecurrenceRule
 
 class RWMEventKitTests: RWMRecurrenceRuleBase {
     /*
